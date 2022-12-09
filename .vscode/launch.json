@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-AnotareiApplication<anotarei>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "anotarei.anotarei.AnotareiApplication",
+      "projectName": "anotarei",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
