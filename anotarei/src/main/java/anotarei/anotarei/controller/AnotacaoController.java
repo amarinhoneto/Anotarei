@@ -3,6 +3,7 @@ package anotarei.anotarei.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,4 +25,8 @@ public class AnotacaoController {
         return ResponseEntity.ok(service.buscarAnotacoes());
     }
 
+    @GetMapping(value = "/buscar/{id}")
+    public ResponseEntity<?> buscarAnotacaoPorId(@PathVariable Integer id){
+        return ResponseEntity.ok(service.buscarAnotacaoPorId(id));
+    }
 }
