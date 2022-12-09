@@ -1,5 +1,6 @@
 package anotarei.anotarei.controller;
 
+import org.apache.catalina.Server;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,5 +29,10 @@ public class AnotacaoController {
     @GetMapping(value = "/buscar/{id}")
     public ResponseEntity<?> buscarAnotacaoPorId(@PathVariable Integer id){
         return ResponseEntity.ok(service.buscarAnotacaoPorId(id));
+    }
+
+    @GetMapping(value = "/buscar-titulo/{titulo}")
+    public ResponseEntity<?> buscarAnotacaoPorTitulo(@PathVariable String titulo){
+        return ResponseEntity.ok(service.buscarAnotacaoPorTitulo(titulo));
     }
 }

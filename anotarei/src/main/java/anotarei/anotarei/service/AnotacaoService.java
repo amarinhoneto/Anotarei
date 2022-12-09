@@ -20,7 +20,7 @@ public class AnotacaoService {
     }
     
     public List<Anotacao> buscarAnotacaoPorTitulo(String titulo){
-        return repository.findBytitulo(titulo);
+        return repository.findByTitulo(titulo);
     }
 
     public Optional<Anotacao> buscarAnotacaoPorId(Integer id){

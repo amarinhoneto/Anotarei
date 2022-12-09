@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface AnotacaoRepository extends JpaRepository<Anotacao, Integer> {
 
-    @Query (value = "SELECT * FROM Anotacao HERE titulo = ?1" , nativeQuery = true)
-    List<Anotacao> findBytitulo(String titulo);
+    List<Anotacao> findByTitulo(String titulo); 
+
+    // @Query (value = "SELECT * FROM Anotacao HERE titulo = ?1" , nativeQuery = true)
+    // List<Anotacao> findBytitulo(String titulo);
 }

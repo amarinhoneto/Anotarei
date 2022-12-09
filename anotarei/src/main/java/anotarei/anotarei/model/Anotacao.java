@@ -23,6 +23,9 @@ public class Anotacao {
     @NotNull
     private String texto;
 
+    @ManyToOne
+    private Usuario usuario;
+
     public Integer getId() {
         return id;
     }
